@@ -1,0 +1,98 @@
+@color1: #fff;
+@color2: #262a2c;
+@color3: #1e2123;
+
+@import "partials/_spinner.less";
+
+body {
+  color: #eee;
+}
+
+.title {
+  width: 65px;
+  float: left;
+  margin-left: 155px;
+}
+
+.window-content {
+  background-color: @color2;
+  padding: 30px;
+}
+
+.section {
+  width: 100%;
+}
+
+.drop-wrapper {
+
+  width: 100%;
+  border-style: dashed;
+  border-radius: 14px;
+  border-color: @color1;
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  .welcome-message {
+    font-size: 20px;
+    color: @color1;
+    width: 100%;
+  }
+
+}
+
+.no-border {
+  border: none;
+}
+
+form {
+  .label {
+    font-size: 15px;
+    margin-bottom: 5px;
+  }
+  .form-control {
+    background-color: @color3;
+    font-size: 14px;
+  }
+  .form-actions {
+    margin-top: 30px;
+  }
+}
+
+.config-form {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.none {
+  display: none;
+}
+
+.info-section {
+  h5 {
+    margin-bottom: 0;
+    font-weight: bold;
+  }
+  p {
+    margin-top: 0;
+  }
+  a {
+    color: #bfbbbb;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  a:hover {
+    opacity: 0.8;
+  }
+  .info-footer {
+    margin-top: 30px;
+    text-align: center;
+    .icon-github, .icon-twitter{
+      font-size: 20px;
+      margin: 10px;
+      cursor: pointer;
+    }
+  }
+}

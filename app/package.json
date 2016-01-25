@@ -1,0 +1,14 @@
+{
+  "name": "easysubs",
+  "productName": "Easysubs",
+  "identifier": "com.keepers.easysubs",
+  "description": "Download subtitles with just a drag and drop.",
+  "version": "0.1.0",
+  "author": "Matias Tucci",
+  "copyright": "© 2016, keepers",
+  "main": "background.js",
+  "dependencies": {
+    "fs-jetpack": "^0.7.0",
+    "opensubtitles-api": "^2.3.0"
+  }
+}

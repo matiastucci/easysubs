@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Easysubs</title>
+  <link href="./stylesheets/photon.min.css" rel="stylesheet" type="text/css">
+  <link href="./stylesheets/main.css" rel="stylesheet" type="text/css">
+</head>
+
+<body ng-app="subsApp">
+
+  <div class="window">
+    <header class="toolbar toolbar-header">
+      <div class="toolbar-actions">
+        <h1 class="title">Easysubs</h1>
+        <div class="btn-group pull-right">
+          <button class="btn btn-default" ui-sref-active="active" ui-sref="home">
+            <span class="icon icon-home"></span>
+          </button>
+          <button class="btn btn-default" ui-sref-active="active" ui-sref="config">
+            <span class="icon icon-cog"></span>
+          </button>
+          <button class="btn btn-default" ui-sref-active="active" ui-sref="info">
+            <span class="icon icon-info"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+    <div ui-view class="window-content"></div>
+  </div>
+
+  <script src="vendor/electron_boilerplate/context_menu.js"></script>
+  <script src="vendor/electron_boilerplate/external_links.js"></script>
+  <script src="vendor/angular/angular.min.js"></script>
+  <script src="vendor/angular/angular-ui-router.min.js"></script>
+  <script src="app.js"></script>
+  <script src="controllers/home-controller.js"></script>
+  <script src="controllers/config-controller.js"></script>
+  <script src="controllers/info-controller.js"></script>
+  <script src="services/config-service.js"></script>
+
+</body>
+</html>
