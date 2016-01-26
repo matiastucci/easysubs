@@ -1,7 +1,31 @@
 Easysubs
 ==============
 
-Easysubs is an opensource app that allows you to download subtitles from OpenSubtitles in a very fast and simple way.
+<p align="center">
+  <img src="http://tucci.me/projects/easysubs/screen.png" alt="Logo"/>
+</p>
+
+##What's this?
+Easysubs is an open source app that allows you to download subtitles from [OpenSubtitles] in a very fast and simple way.
+
+##Why?
+I was using a similar app that recently stopped being free. So, that was a good excuse to spend a few hours trying [Electron] and [electron-boilerplate].
+
+##Download
+* [OS X]
+
+### Getting Started
+```
+$ git clone https://github.com/easysubs
+$ cd easysubs
+$ npm install
+$ npm start
+```
+
+### Making a release
+```
+$ npm run release
+```
 
 # License
 
@@ -26,3 +50,8 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+[OpenSubtitles]: http://www.opensubtitles.org
+[Electron]: http://electron.atom.io
+[electron-boilerplate]: https://github.com/szwacz/electron-boilerplate
+[OS X]: http://tucci.me/projects/easysubs/easysubs_0.1.0.dmg
