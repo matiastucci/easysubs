@@ -13,6 +13,7 @@ I was using a similar app that recently stopped being free. So, that was a good 
 
 ##Download
 * [OS X]
+* [Windows]
 
 ### Getting Started
 ```
@@ -55,3 +56,4 @@ SOFTWARE.
 [Electron]: http://electron.atom.io
 [electron-boilerplate]: https://github.com/szwacz/electron-boilerplate
 [OS X]: http://tucci.me/projects/easysubs/easysubs_0.1.0.dmg
+[Windows]: http://tucci.me/projects/easysubs/easysubs_0.1.0.exe
