@@ -2,7 +2,7 @@ Easysubs
 ==============
 
 <p align="center">
-  <img src="http://tucci.me/projects/easysubs/screen.png" alt="Logo"/>
+  <img src="http://tucci.me/projects/easysubs/screen.png"  width="450px" alt="Screenshot"/>
 </p>
 
 ##What's this?
@@ -16,7 +16,7 @@ I was using a similar app that recently stopped being free. So, that was a good 
 
 ### Getting Started
 ```
-$ git clone https://github.com/easysubs
+$ git clone https://github.com/matiastucci/easysubs
 $ cd easysubs
 $ npm install
 $ npm start
@@ -27,7 +27,7 @@ $ npm start
 $ npm run release
 ```
 
-# License
+### License
 
 The MIT License (MIT)
 
