@@ -1,7 +1,9 @@
 Easysubs
 ==============
 
-
+<p align="center">
+  <img src="http://tucci.me/projects/easysubs/screen.png" alt="Logo"/>
+</p>
 
 ##What's this?
 Easysubs is an open source app that allows you to download subtitles from [OpenSubtitles] in a very fast and simple way.
