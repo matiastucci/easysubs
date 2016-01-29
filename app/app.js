@@ -1,6 +1,18 @@
 'use strict';
 angular.module('subsApp', ['ui.router'])
-.config(function($stateProvider, $urlRouterProvider) {
+.run(['$document', function($document){
+
+  $document[0].addEventListener('drop',function(event){
+    event.preventDefault();
+    return false;
+  }, false);
+  $document[0].addEventListener('dragover',function(event){
+    event.preventDefault();
+    return false;
+  }, false);
+
+}])
+.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
 
   $urlRouterProvider.otherwise("/home");
 
@@ -21,4 +33,4 @@ angular.module('subsApp', ['ui.router'])
   	controller: "infoCtrl"
   });
   
-});
+}]);
