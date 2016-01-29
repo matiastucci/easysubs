@@ -14,7 +14,7 @@
 
 		// @TODO: update useragent
 		var OpenSubtitles = new OS({
-	    useragent:'OSTestUserAgent',
+	    useragent:'EasysubsNJ',
 	    ssl: true
 		});
 
