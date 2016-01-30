@@ -9,16 +9,14 @@
 	<table class="table-striped" ng-show="videos.length">
 	  <thead>
 	    <tr>
-	      <th>Name</th>
-	      <th>Kind</th>
-	      <th>Status</th>
+	      <th class="th-name">Name</th>
+	      <th class="text-center">Status</th>
 	    </tr>
 	  </thead>
 	  <tbody>
 	    <tr ng-repeat="video in videos">
 	      <td>{{video.name}}</td>
-	      <td>{{video.format}}</td>
-	      <td>{{video.status}}</td>
+	      <td class="text-center"><span class="icon" ng-class="getStatusIcon(video.status)"></span></td>
 	    </tr>
 	  </tbody>
 	</table>
