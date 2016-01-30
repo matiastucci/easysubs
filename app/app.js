@@ -19,18 +19,17 @@ angular.module('subsApp', ['ui.router'])
   $stateProvider
   .state('home', {
   	url: "/home",
-  	templateUrl: "partials/home.html",
+  	templateUrl: "home/home.html",
   	controller: "homeCtrl"
   })
   .state('config', {
   	url: "/config",
-  	templateUrl: "partials/config.html",
+  	templateUrl: "config/config.html",
   	controller: "configCtrl"
   })
   .state('info', {
   	url: "/info",
-  	templateUrl: "partials/info.html",
-  	controller: "infoCtrl"
+  	templateUrl: "info/info.html"
   });
   
 }]);
