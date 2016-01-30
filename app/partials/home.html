@@ -1,9 +1,1 @@
-<div class="drop-wrapper" ng-class='{"no-border": data.loading}'>
-	<p class="welcome-message" ng-class="{none: data.loading}">
-		Drop your video here
-	</p>
-	<div class="spinner" ng-class="{none: !data.loading}">
-		<div class="double-bounce1"></div>
-		<div class="double-bounce2"></div>
-	</div>
-</div>
+<droppable videos="data.videos" on-drop="onDropFiles(videos)"></droppable>

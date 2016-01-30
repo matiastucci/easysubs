@@ -1,0 +1,26 @@
+<div class="home-wrapper">
+
+	<div class="drop-wrapper" ng-show="!videos.length">
+		<p class="welcome-message">
+			Drop your video here
+		</p>
+	</div>
+
+	<table class="table-striped" ng-show="videos.length">
+	  <thead>
+	    <tr>
+	      <th>Name</th>
+	      <th>Kind</th>
+	      <th>Status</th>
+	    </tr>
+	  </thead>
+	  <tbody>
+	    <tr ng-repeat="video in videos">
+	      <td>{{video.name}}</td>
+	      <td>{{video.format}}</td>
+	      <td>{{video.status}}</td>
+	    </tr>
+	  </tbody>
+	</table>
+	
+</div>
