@@ -10,7 +10,7 @@ angular.module('subsApp')
 	});
 
 	return {
-		query: function(name, path, size){
+		query: function(id, name, path, size){
 			return OpenSubtitles.search({
 		    sublanguageid: appConfig.language.value,
 		    path: path,
@@ -20,6 +20,7 @@ angular.module('subsApp')
 			}).then(function(sub){
 				var hasUrl = Object.keys(sub).length ? true : false;
 				sub.file = {
+					id: id,
 					name: name,
 					path: path,
 					hasUrl: hasUrl
