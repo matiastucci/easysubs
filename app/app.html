@@ -11,9 +11,11 @@
 <body ng-app="subsApp">
 
   <div class="window">
-    <header class="toolbar toolbar-header">
+
+    <div ui-view class="window-content"></div>
+
+    <footer class="toolbar toolbar-footer">
       <div class="toolbar-actions">
-        <h1 class="title">Easysubs</h1>
         <div class="btn-group pull-right">
           <button class="btn btn-default" ui-sref-active="active" ui-sref="home">
             <span class="icon icon-home"></span>
@@ -26,8 +28,9 @@
           </button>
         </div>
       </div>
-    </header>
-    <div ui-view class="window-content"></div>
+
+    </footer>
+
   </div>
 
   <script src="vendor/electron_boilerplate/context_menu.js"></script>
