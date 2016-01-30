@@ -14,20 +14,11 @@
 		$scope.data = {};
 		$scope.data.videos = [];
 
-		var downloadSubtitle = function(fileId, url, fileName, last){
-			// @TODO: check if url is duplicated. Sometimes
-			// OpenSubtitles is returning wrong sub in a TV Show
-		  var file = fs.createWriteStream(fileName);
-		  var request = http.get(url, function(response) {
-		    response.pipe(file);
-		    changeVideoStatus(fileId, 'complete');
-		    if(last){
-			    new Notification('Download complete', {
-				    title: "Download complete",
-				    body: "Enjoy your video/s :)",
-				    icon: path.join(__dirname, 'icon.png')
-				  });
-		    }
+		var sendCompletedNotification = function(){
+			new Notification('Download completed', {
+		    title: "Download completed",
+		    body: "Enjoy :)",
+		    icon: path.join(__dirname, 'icon.png')
 		  });
 		};
 
@@ -39,6 +30,19 @@
 		var changeVideoStatus = function(id, status){
 			$scope.$apply(function () {
 		    $scope.data.videos[id].status = status;
+		  });
+		};
+
+		var downloadSubtitle = function(fileId, url, fileName, last){
+			// @TODO: check if url is duplicated. Sometimes
+			// OpenSubtitles is returning wrong sub in a TV Show
+		  var file = fs.createWriteStream(fileName);
+		  var request = http.get(url, function(response) {
+		  	changeVideoStatus(fileId, 'complete');
+		    response.pipe(file);
+		    if(last){
+			    sendCompletedNotification();
+		    }
 		  });
 		};
 
