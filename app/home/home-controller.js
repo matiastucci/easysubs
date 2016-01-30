@@ -60,7 +60,8 @@
 			    	var subName = getSubName(subtitles.file.path);
 			    	var key = Object.keys(subtitles)[0];
 			    	if(subtitles.file.hasUrl){
-							downloadSubtitle(subtitles.file.id, subtitles[key].url, subName, i == videos.length);
+			    		var isLast = (subtitles.file.id + 1) === videos.length;
+							downloadSubtitle(subtitles.file.id, subtitles[key].url, subName, isLast);
 						}
 						else{
 							changeVideoStatus(subtitles.file.id, 'error');
