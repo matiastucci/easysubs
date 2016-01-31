@@ -3,7 +3,6 @@ angular.module('subsApp')
 .factory('OpenSubtitles',['Config', function(Config){
 
 	var OS 	 = require("opensubtitles-api");
-	var appConfig = Config.read();
 	var OpenSubtitles = new OS({
     useragent:'EasysubsNJ',
     ssl: true
@@ -11,6 +10,7 @@ angular.module('subsApp')
 
 	return {
 		query: function(id, name, path, size){
+			var appConfig = Config.read();
 			return OpenSubtitles.search({
 		    sublanguageid: appConfig.language.value,
 		    path: path,
