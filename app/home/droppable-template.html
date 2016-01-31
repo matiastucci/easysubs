@@ -1,0 +1,26 @@
+<div>
+
+	<div class="drop-wrapper" ng-show="!videos.length">
+		<div class="drop">
+			<p class="welcome-message">
+				Drop your videos here
+			</p>
+		</div>
+	</div>
+
+	<table class="files-table table-striped" ng-show="videos.length">
+	  <thead>
+	    <tr>
+	      <th class="th-name">Name</th>
+	      <th class="text-center">Status</th>
+	    </tr>
+	  </thead>
+	  <tbody>
+	    <tr ng-repeat="video in videos | orderBy:'$index':true">
+	      <td>{{video.name}}</td>
+	      <td class="text-center"><span class="icon" ng-class="getStatusIcon(video.status)"></span></td>
+	    </tr>
+	  </tbody>
+	</table>
+
+</div>

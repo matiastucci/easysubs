@@ -15,8 +15,8 @@ var mainWindow;
 
 // Preserver of the window size and position between app launches.
 var mainWindowState = windowStateKeeper('main', {
-    width: 400,
-    height: 350
+    width: 460,
+    height: 360
 });
 
 app.on('ready', function () {
@@ -25,8 +25,7 @@ app.on('ready', function () {
         x: mainWindowState.x,
         y: mainWindowState.y,
         width: mainWindowState.width,
-        height: mainWindowState.height,
-        'title-bar-style': 'hidden'
+        height: mainWindowState.height
     });
 
     if (mainWindowState.isMaximized) {
