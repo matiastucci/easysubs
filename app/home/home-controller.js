@@ -13,6 +13,7 @@
 
 		$scope.data = {};
 		$scope.data.videos = [];
+		var downloadsCount = 0;
 
 		var sendCompletedNotification = function(){
 			new Notification('Download completed', {
@@ -33,14 +34,16 @@
 		  });
 		};
 
-		var downloadSubtitle = function(fileId, url, fileName, last){
+		var downloadSubtitle = function(fileId, url, fileName){
 			// @TODO: check if url is duplicated. Sometimes
 			// OpenSubtitles is returning wrong sub in a TV Show
 		  var file = fs.createWriteStream(fileName);
 		  var request = http.get(url, function(response) {
+		  	downloadsCount++;
+		  	console.log(downloadsCount);
 		  	changeVideoStatus(fileId, 'complete');
 		    response.pipe(file);
-		    if(last){
+		    if(downloadsCount === $scope.data.videos.length){
 			    sendCompletedNotification();
 		    }
 		  });
@@ -60,8 +63,7 @@
 			    	var subName = getSubName(subtitles.file.path);
 			    	var key = Object.keys(subtitles)[0];
 			    	if(subtitles.file.hasUrl){
-			    		var isLast = (subtitles.file.id + 1) === videos.length;
-							downloadSubtitle(subtitles.file.id, subtitles[key].url, subName, isLast);
+							downloadSubtitle(subtitles.file.id, subtitles[key].url, subName);
 						}
 						else{
 							changeVideoStatus(subtitles.file.id, 'error');
