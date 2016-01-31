@@ -40,7 +40,6 @@
 		  var file = fs.createWriteStream(fileName);
 		  var request = http.get(url, function(response) {
 		  	downloadsCount++;
-		  	console.log(downloadsCount);
 		  	changeVideoStatus(fileId, 'complete');
 		    response.pipe(file);
 		    if(downloadsCount === $scope.data.videos.length){
@@ -50,24 +49,25 @@
 		};
 
 		$scope.onDropFiles = function(videos){
-			
+			var videosLength = $scope.data.videos.length;
 			for(var i = 0; i < videos.length; i++){
 				var file = videos[i];
-				file.id = i;
+				file.id = videosLength++;
 				file.status = 'loading';
 				$scope.$apply(function () {
-			    $scope.data.videos[i] = file;
+			    $scope.data.videos[file.id] = file;
 			  });
 				OpenSubtitles.query(file.id, file.name, file.path, file.size)
 				.then(function(subtitles){
-			    	var subName = getSubName(subtitles.file.path);
-			    	var key = Object.keys(subtitles)[0];
-			    	if(subtitles.file.hasUrl){
-							downloadSubtitle(subtitles.file.id, subtitles[key].url, subName);
-						}
-						else{
-							changeVideoStatus(subtitles.file.id, 'error');
-						}
+		    	var subName = getSubName(subtitles.file.path);
+		    	var key = Object.keys(subtitles)[0];
+		    	if(subtitles.file.hasUrl){
+						downloadSubtitle(subtitles.file.id, subtitles[key].url, subName);
+					}
+					else{
+						// No subtitles
+						changeVideoStatus(subtitles.file.id, 'error');
+					}
 				});
 			}
 		};

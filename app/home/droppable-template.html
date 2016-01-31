@@ -16,7 +16,7 @@
 	    </tr>
 	  </thead>
 	  <tbody>
-	    <tr ng-repeat="video in videos">
+	    <tr ng-repeat="video in videos | orderBy:'$index':true">
 	      <td>{{video.name}}</td>
 	      <td class="text-center"><span class="icon" ng-class="getStatusIcon(video.status)"></span></td>
 	    </tr>
