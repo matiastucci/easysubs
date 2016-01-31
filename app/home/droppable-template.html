@@ -1,12 +1,14 @@
-<div class="home-wrapper">
+<div>
 
 	<div class="drop-wrapper" ng-show="!videos.length">
-		<p class="welcome-message">
-			Drop your videos here
-		</p>
+		<div class="drop">
+			<p class="welcome-message">
+				Drop your videos here
+			</p>
+		</div>
 	</div>
 
-	<table class="table-striped" ng-show="videos.length">
+	<table class="files-table table-striped" ng-show="videos.length">
 	  <thead>
 	    <tr>
 	      <th class="th-name">Name</th>
@@ -20,5 +22,5 @@
 	    </tr>
 	  </tbody>
 	</table>
-	
+
 </div>

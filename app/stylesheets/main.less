@@ -1,112 +1,55 @@
-@color1: #fff;
-@color2: #262a2c;
-@color3: #1e2123;
+@background: #f5f5f4;
+@linkColor: #5d5d5d;
+@darkColor: #1e2123;
 
-@import "partials/_spinner.less";
+@import "partials/_globals.less";
+@import "partials/_helpers.less";
 
-.config-section, .info-section {
-  color: #eee;
-  padding: 30px;
-}
-
-.title {
-  width: 65px;
-  float: left;
-  margin-left: 155px;
-}
-
-.window-content {
-  background-color: @color2;
-}
-
-.section {
-  width: 100%;
-}
-
-.text-center {
-  text-align: center;
-}
-
-.home-wrapper {
-  table {
-    table-layout: fixed;
-    .th-name {
-      width: 80%;
-    }
-  }
-}
+// Home
 
 .drop-wrapper {
+  height: 325px;;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  width: 100%;
+.drop {
+  width: 80%;
+  height: 70%;
   border-style: dashed;
   border-radius: 14px;
-  border-color: @color1;
+  border-color: @darkColor;
   display: flex;
   align-items: center;
   text-align: center;
   padding: 30px;
+  margin-top: -20px;
 
   .welcome-message {
     font-size: 20px;
-    color: @color1;
+    color: @darkColor;
     width: 100%;
   }
-
 }
 
-.no-border {
-  border: none;
-}
+.files-table {
+  table-layout: fixed;
 
-form {
-  .label {
-    font-size: 15px;
-    margin-bottom: 5px;
-  }
-  .form-control {
-    background-color: @color3;
-    font-size: 14px;
-  }
-  .form-actions {
-    margin-top: 30px;
+  .th-name {
+    width: 80%;
   }
 }
 
-.config-form {
-  width: 60%;
-  margin-left: auto;
-  margin-right: auto;
-}
+// Info
 
-.none {
-  display: none;
-}
-
-.info-section {
-  h5 {
-    margin-bottom: 0;
-    font-weight: bold;
-  }
-  p {
-    margin-top: 0;
-  }
-  a {
-    color: #bfbbbb;
+.info-footer {
+  margin-top: 30px;
+  text-align: center;
+  
+  .icon-github, .icon-twitter{
+    font-size: 20px;
+    margin: 10px;
     cursor: pointer;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  a:hover {
-    opacity: 0.8;
-  }
-  .info-footer {
-    margin-top: 30px;
-    text-align: center;
-    .icon-github, .icon-twitter{
-      font-size: 20px;
-      margin: 10px;
-      cursor: pointer;
-    }
   }
 }
