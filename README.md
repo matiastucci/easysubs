@@ -2,7 +2,7 @@ Easysubs
 ==============
 
 <p align="center">
-  <img src="http://tucci.me/projects/easysubs/screen2.png"  width="450px" alt="Screenshot"/>
+  <img src="http://tucci.me/projects/easysubs/screen3.png"  width="450px" alt="Screenshot"/>
 </p>
 
 ##What's this?
