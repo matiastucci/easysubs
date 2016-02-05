@@ -19,19 +19,12 @@
 			controller: ['$scope', function($scope){
 
 				$scope.getStatusIcon = function(status){
-					var icon = 'icon-download';
-					if(status === 'complete'){
-						icon = 'icon-check';
-					}
-					else if(status === 'error'){
-						icon = 'icon-cancel';
-					}
-					return icon;
+					return status === 'complete' ? 'icon-check' : 'icon-cancel';
 				};
 
 			}],
-			templateUrl: 'home/droppable-template.html' 
+			templateUrl: 'home/droppable-template.html'
 		};
 	}]);
-	
+
 })();
