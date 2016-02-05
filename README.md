@@ -6,7 +6,7 @@ Easysubs
 </p>
 
 ##What's this?
-Easysubs is an open source app that allows you to download subtitles from [OpenSubtitles] in a very fast and simple way.
+[Demo video] - Easysubs is an open source app that allows you to download subtitles from [OpenSubtitles] in a very fast and simple way.
 To start I used [electron-boilerplate] and [Photon] for the UI.
 
 ##Why?
@@ -53,6 +53,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
+[Demo video]: https://youtu.be/qmAYmNHFX2g
 [OpenSubtitles]: http://www.opensubtitles.org
 [Electron]: http://electron.atom.io
 [electron-boilerplate]: https://github.com/szwacz/electron-boilerplate
