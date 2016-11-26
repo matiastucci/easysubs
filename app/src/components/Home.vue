@@ -1,6 +1,7 @@
 <script>
 
   import Videos from 'services/videos'
+  const path = require('path')
 
   export default {
     name: 'Home',
@@ -52,7 +53,15 @@
           }
         }
 
-        if (!videos.length) { return }
+        if (!videos.length) {
+          /* eslint-disable no-new */
+          new Notification('Wrong format', {
+            body: 'Please, drop a video',
+            // TODO: fix icon path
+            icon: path.join(__dirname, '/dist/icons/icon.png'),
+          });
+          return
+        }
 
         Videos.set(videos)
         this.$router.push('videos')
