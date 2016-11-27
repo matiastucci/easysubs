@@ -4,6 +4,7 @@
   "description": "Download subtitles with just a drag and drop",
   "main": "electron.js",
   "dependencies": {
+    "opensubtitles-api": "^3.3.0",
     "vue": "^2.0.1",
     "vue-router": "^2.0.0"
   },
