@@ -20,6 +20,10 @@
       }
     },
 
+    beforeDestroy() {
+      Videos.clear()
+    },
+
     methods: {
       downloadSub(id, name, path, size) {
         this.downloadsCount++

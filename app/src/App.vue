@@ -1,4 +1,7 @@
 <script>
+
+  import Videos from 'services/videos'
+
   export default {
     name: 'App',
 
@@ -12,6 +15,14 @@
         })
       })
     },
+
+    methods: {
+      clearVideos() {
+        Videos.clear()
+        this.$router.push('home')
+      },
+    },
+
   }
 </script>
 
@@ -24,7 +35,9 @@
     footer.toolbar.toolbar-footer
       .toolbar-actions
         .btn-group.pull-right
-          router-link.btn.btn-default(to='/home' v-bind:class='{\'active\': $route.name === \'videos\'}')
+          a.btn.btn-default(@click='clearVideos' v-if='$route.name === \'videos\'')
+            span.icon.icon-trash
+          router-link.btn.btn-default(v-else to='/home')
             span.icon.icon-home
           router-link.btn.btn-default(to='/settings')
             span.icon.icon-cog
