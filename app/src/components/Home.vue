@@ -47,14 +47,19 @@
             const filename = files[file].name
             const fileExt = filename.substring(filename.lastIndexOf('.') + 1).toLowerCase()
             if (Videos.allowedExtensions().indexOf(fileExt) !== -1) {
-              files[file].status = 'loading'
-              videos.push(files[file])
+              const video = {
+                id: videos.length + 1,
+                status: 'loading',
+                name: filename,
+                path: files[file].path,
+                size: files[file].size,
+              }
+              videos.push(video)
             }
           }
         }
 
         if (!videos.length) {
-          /* eslint-disable no-new */
           new Notification('Wrong format', {
             body: 'Please, drop a video',
             // TODO: fix icon path
