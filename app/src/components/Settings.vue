@@ -7,16 +7,21 @@
 
     data() {
       return {
-        subLanguage: { value: 'eng' },
-        subExtension: { value: 'srt' },
+        subLanguage: {},
+        subExtension: {},
       }
+    },
+
+    mounted() {
+      const settings = Settings.get()
+      this.subLanguage = settings.subLanguage
+      this.subExtension = settings.subExtension
     },
 
     methods: {
       saveSettings() {
-        // TODO: pass data
-        Settings.set()
-      }
+        Settings.set(this.subLanguage, this.subExtension)
+      },
     },
   }
 </script>
