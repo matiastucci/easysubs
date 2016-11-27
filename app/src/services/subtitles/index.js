@@ -10,12 +10,13 @@ const OpenSubtitles = new OS({
 })
 
 function get(id, filename, fpath, filesize) {
+  const settings = Settings.get()
   return OpenSubtitles.search({
-    sublanguageid: 'eng',
+    sublanguageid: settings.subLanguage.value,
     path: fpath,
     filename,
     filesize,
-    extensions: ['srt'],
+    extensions: [settings.subExtension.value],
   })
   .then(sub => {
     const hasUrl = Object.keys(sub).length
@@ -28,7 +29,6 @@ function getName(videoName) {
   const n = videoName.lastIndexOf('.')
   const videoNameWithoutExtension = n > -1 ? videoName.substr(0, n) : videoName
   const subExt = Settings.get().subExtension.value
-  console.log(`${videoNameWithoutExtension}.${subExt}`);
   return `${videoNameWithoutExtension}.${subExt}`
 }
 
