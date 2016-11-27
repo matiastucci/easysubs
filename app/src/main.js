@@ -13,7 +13,6 @@ const router = new Router({
   linkActiveClass: 'active',
 })
 
-/* eslint-disable no-new */
 new Vue({
   router,
   ...App,

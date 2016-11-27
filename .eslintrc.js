@@ -23,5 +23,6 @@ module.exports = {
     'no-console': 0,
     'func-names': 0,
     'semi': 0,
+    'no-new': 0,
   }
 }
