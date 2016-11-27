@@ -13,6 +13,14 @@
       }
     },
 
+    beforeRouteEnter(to, from, next) {
+      next(vm => {
+        if (!Videos.get().length) {
+          vm.$router.push('home')
+        }
+      })
+    },
+
     mounted() {
       for (let i = 0; i < this.videos.length; i++) {
         const video = this.videos[i]
