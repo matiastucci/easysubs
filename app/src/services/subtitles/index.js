@@ -1,3 +1,5 @@
+import Settings from 'services/settings'
+
 const OS 	 = require('opensubtitles-api')
 const http = require('http')
 const fs 	 = require('fs')
@@ -23,9 +25,11 @@ function get(id, filename, fpath, filesize) {
 }
 
 function getName(videoName) {
-  // TODO: use saved subtitle format
-  return `${videoName}.srt`
-  // return `${path.parse(videoName).name}.srt`
+  const n = videoName.lastIndexOf('.')
+  const videoNameWithoutExtension = n > -1 ? videoName.substr(0, n) : videoName
+  const subExt = Settings.get().subExtension.value
+  console.log(`${videoNameWithoutExtension}.${subExt}`);
+  return `${videoNameWithoutExtension}.${subExt}`
 }
 
 function download(id, url, name) {
