@@ -9,6 +9,8 @@
       return {
         subLanguage: {},
         subExtension: {},
+        showSavedIcon: false,
+        timeout: undefined,
       }
     },
 
@@ -18,9 +20,17 @@
       this.subExtension = settings.subExtension
     },
 
+    beforeDestroy() {
+      clearTimeout(this.timeout)
+    },
+
     methods: {
       saveSettings() {
         Settings.set(this.subLanguage, this.subExtension)
+        this.showSavedIcon = true
+        this.timeout = setTimeout(() => {
+          this.showSavedIcon = false
+        }, 1000)
       },
     },
   }
@@ -44,7 +54,9 @@
           option(v-bind:value='{value: \'srt\'}') .srt
           option(v-bind:value='{value: \'vtt\'}') .vtt
       .form-actions
-        button.btn.btn-form.btn-primary.pull-right(@click.prevent='saveSettings') Save
+        button.btn.btn-form.pull-right(@click.prevent='saveSettings')
+          span.icon.icon-check(v-if='showSavedIcon')
+          span(v-else) Save
 </template>
 
 <style lang="scss">
