@@ -23,7 +23,7 @@ function createWindow () {
   mainWindow = new BrowserWindow({
     width: 350,
     height: 350,
-    minHeigth: 350,
+    minHeight: 350,
     minWidth: 350,
     title: 'Easysubs',
     backgroundColor: '#eee',
