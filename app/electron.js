@@ -3,7 +3,9 @@
 const electron = require('electron')
 const path = require('path')
 const app = electron.app
+const os = require('os')
 const BrowserWindow = electron.BrowserWindow
+const autoUpdater = electron.autoUpdater
 
 let mainWindow
 let config = {}
@@ -46,6 +48,16 @@ function createWindow () {
 
   mainWindow.on('closed', () => {
     mainWindow = null
+  })
+
+  mainWindow.webContents.on('did-finish-load', () => {
+    const platform = os.platform() + '_' + os.arch()
+    const version = app.getVersion()
+    autoUpdater.setFeedURL(`https://easysubs-autoupdater.herokuapp.com/update/${platform}/${version}`)
+    console.log(`https://easysubs-autoupdater.herokuapp.com/update/${platform}/${version}`)
+    autoUpdater.on('error', (ev, err) => {
+      console.log(err)
+    });
   })
 
   console.log('mainWindow opened')
