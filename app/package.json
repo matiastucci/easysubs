@@ -1,6 +1,6 @@
 {
   "name": "Easysubs",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Download subtitles with just a drag and drop",
   "main": "electron.js",
   "dependencies": {
