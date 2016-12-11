@@ -1,7 +1,7 @@
 .DS_Store
 app/dist/index.html
 app/dist/build.js
-builds/*
+dist
 coverage
 node_modules
 npm-debug.log
