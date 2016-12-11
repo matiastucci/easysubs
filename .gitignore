@@ -1,7 +1,8 @@
 .DS_Store
 app/dist/index.html
 app/dist/build.js
-dist
+app/dist/styles.css
+builds/*
 coverage
 node_modules
 npm-debug.log
