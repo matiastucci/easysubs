@@ -21,7 +21,7 @@ I was using a similar app that recently stopped being free. So, that was a good 
 $ git clone https://github.com/matiastucci/easysubs
 $ cd easysubs
 $ npm install
-$ npm start
+$ npm run dev
 ```
 
 ### Making a release
@@ -57,5 +57,5 @@ SOFTWARE.
 [Electron]: http://electron.atom.io
 [electron-boilerplate]: https://github.com/szwacz/electron-boilerplate
 [Photon]: http://photonkit.com
-[OS X]: http://tucci.me/projects/easysubs/easysubs_0.1.0.dmg
-[Windows]: http://tucci.me/projects/easysubs/easysubs_0.1.0.exe
+[OS X]: https://github.com/matiastucci/easysubs/releases/download/v0.0.3/Easysubs-osx-x64.zip
+[Windows]: https://github.com/matiastucci/easysubs/releases/download/v0.0.3/Easysubs-win32-x64.zip
