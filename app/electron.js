@@ -19,9 +19,6 @@ if (process.env.NODE_ENV === 'development') {
 }
 
 function createWindow () {
-  /**
-   * Initial window options
-   */
   mainWindow = new BrowserWindow({
     width: 350,
     height: 350,
@@ -53,14 +50,33 @@ function createWindow () {
   mainWindow.webContents.on('did-finish-load', () => {
     const platform = os.platform() + '_' + os.arch()
     const version = app.getVersion()
+
+    mainWindow.webContents.send('ping', `App version: ${version}`)
+
     autoUpdater.setFeedURL(`https://easysubs-autoupdater.herokuapp.com/update/${platform}/${version}`)
-    console.log(`https://easysubs-autoupdater.herokuapp.com/update/${platform}/${version}`)
+    autoUpdater.checkForUpdates()
+
     autoUpdater.on('error', (ev, err) => {
-      console.log(err)
+      mainWindow.webContents.send('ping', 'update-error')
+      mainWindow.webContents.send('ping', err)
+    });
+
+    autoUpdater.on('checking-for-update', (ev, err) => {
+      mainWindow.webContents.send('ping', 'checking-for-update')
+    });
+
+    autoUpdater.on('update-available', (ev, err) => {
+      mainWindow.webContents.send('ping', 'update-available')
+    });
+
+    autoUpdater.on('update-not-available', (ev, err) => {
+      mainWindow.webContents.send('ping', 'update-not-available')
+    });
+
+    autoUpdater.on('update-downloaded', (ev, err) => {
+      mainWindow.webContents.send('ping', 'update-downloaded')
     });
   })
-
-  console.log('mainWindow opened')
 }
 
 app.on('ready', createWindow)
