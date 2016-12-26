@@ -4,6 +4,8 @@ import Router from 'vue-router'
 import App from './App'
 import routes from './routes'
 
+import Helpers from 'services/helpers'
+
 Vue.use(Router)
 Vue.config.debug = true
 
@@ -17,3 +19,6 @@ new Vue({
   router,
   ...App,
 }).$mount('#app')
+
+Helpers.setupExternalLinks()
+Helpers.listenToPing()
