@@ -5,7 +5,6 @@ const path = require('path')
 const app = electron.app
 const os = require('os')
 const BrowserWindow = electron.BrowserWindow
-const autoUpdater = electron.autoUpdater
 
 let mainWindow
 let config = {}
@@ -48,6 +47,8 @@ function createWindow () {
   })
 
   mainWindow.webContents.on('did-finish-load', () => {
+    if (os.platform() !== 'darwin') { return }
+    const autoUpdater = electron.autoUpdater
     const platform = os.platform() + '_' + os.arch()
     const version = app.getVersion()
 

@@ -4,7 +4,6 @@ const bus = new Vue()
 const electron = require('electron')
 const shell = electron.shell
 const ipcRenderer = electron.ipcRenderer
-const autoUpdater = electron.remote.autoUpdater
 
 function setupExternalLinks() {
   const supportExternalLinks = function (e) {
@@ -49,7 +48,7 @@ function toggleDevTools() {
 }
 
 function quitAndInstall() {
-  autoUpdater.quitAndInstall()
+  electron.remote.autoUpdater.quitAndInstall()
 }
 
 export default {
