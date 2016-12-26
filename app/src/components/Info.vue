@@ -1,22 +1,21 @@
 <script>
+
+  import Helpers from 'services/helpers'
+
   export default {
     name: 'Info',
 
-    data() {
-      return {
-
-      }
-    },
-
     methods: {
-
+      toggleDevTools() {
+        Helpers.toggleDevTools()
+      },
     },
   }
 </script>
 
 <template lang="pug">
   #info.padded-more
-    h5 What's this?
+    h5(@click='toggleDevTools()') What's this?
     p Easysubs is an open source app that allows you to download subtitles from
       a.js-external-link(href='http://www.opensubtitles.org') &nbsp;OpenSubtitles&nbsp;
       | in a very fast way.
