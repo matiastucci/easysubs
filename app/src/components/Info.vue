@@ -33,6 +33,9 @@
 
 <style lang="scss">
   #info {
+    h5 {
+      margin-bottom: 5px;
+    }
     p {
       margin-top: 5px;
     }
