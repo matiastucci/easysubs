@@ -1,6 +1,6 @@
 {
   "name": "Easysubs",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "Download subtitles with just a drag and drop",
   "scripts": {
     "build": "node tasks/release.js",
