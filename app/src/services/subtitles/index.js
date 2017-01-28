@@ -1,7 +1,7 @@
 import Settings from 'services/settings'
 
 const OS 	 = require('opensubtitles-api')
-const http = require('http')
+const https = require('https')
 const fs 	 = require('fs')
 
 const OpenSubtitles = new OS({
@@ -37,7 +37,7 @@ function download(id, url, name) {
 	// OpenSubtitles is returning wrong sub in a TV Show
   const file = fs.createWriteStream(name)
   return new Promise(resolve => {
-    http.get(url, response => {
+    https.get(url, response => {
       response.pipe(file)
       resolve('ready')
     })
