@@ -1,5 +1,5 @@
 Easysubs
-==============
+=============
 
 <p align="center">
   <img src="http://tucci.me/projects/easysubs/screen.gif" width="600px" alt="Screenshot"/>
