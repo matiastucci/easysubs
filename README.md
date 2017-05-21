@@ -5,13 +5,13 @@ Easysubs
   <img src="http://tucci.me/projects/easysubs/screen.gif" width="600px" alt="Screenshot"/>
 </p>
 
-##What's this?
+## What's this?
 Easysubs is an open source app that allows you to download subtitles from [OpenSubtitles] in a very fast and simple way. I used [electron-vue] as a starter and [Photon] for the UI.
 
-##Why?
+## Why?
 I was using a similar app that recently stopped being free. So, that was a good excuse to spend a few hours trying [Electron].
 
-##Download
+## Download
 * [OS X]
 * [Windows]
 
