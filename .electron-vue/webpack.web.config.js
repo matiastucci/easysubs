@@ -88,7 +88,7 @@ let webConfig = {
       minify: {
         collapseWhitespace: true,
         removeAttributeQuotes: true,
-        removeComments: false
+        removeComments: true
       },
       nodeModules: false
     }),
@@ -120,7 +120,7 @@ if (process.env.NODE_ENV === 'production') {
 
   webConfig.plugins.push(
     new BabiliWebpackPlugin({
-      removeConsole: true,
+      removeConsole: false,
       removeDebugger: true
     }),
     new CopyWebpackPlugin([

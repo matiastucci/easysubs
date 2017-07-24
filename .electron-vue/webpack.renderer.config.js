@@ -108,7 +108,7 @@ let rendererConfig = {
       minify: {
         collapseWhitespace: true,
         removeAttributeQuotes: true,
-        removeComments: false
+        removeComments: true
       },
       nodeModules: process.env.NODE_ENV !== 'production'
         ? path.resolve(__dirname, '../node_modules')
@@ -151,7 +151,7 @@ if (process.env.NODE_ENV === 'production') {
 
   rendererConfig.plugins.push(
     new BabiliWebpackPlugin({
-      removeConsole: true,
+      removeConsole: false,
       removeDebugger: true
     }),
     new CopyWebpackPlugin([
