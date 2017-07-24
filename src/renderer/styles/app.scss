@@ -1,0 +1,30 @@
+@import "../../static/photon/css/photon.min.css";
+@import "spinner";
+@import "fonts";
+
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+.window-content {
+  background-color: #eee;
+}
+
+.padded-more {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #48494a;
+  cursor: pointer;
+  transition: opacity .4s;
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+h5 {
+  margin-top: 0;
+}

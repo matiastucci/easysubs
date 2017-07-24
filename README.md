@@ -1,36 +1,25 @@
-Easysubs
-=============
+# easysubs
 
-<p align="center">
-  <img src="http://tucci.me/projects/easysubs/screen.gif" width="600px" alt="Screenshot"/>
-</p>
+> An electron-vue project
 
-## What's this?
-Easysubs is an open source app that allows you to download subtitles from [OpenSubtitles] in a very fast and simple way. I used [electron-vue] as a starter and [Photon] for the UI.
+#### Build Setup
 
-## Why?
-I was using a similar app that recently stopped being free. So, that was a good excuse to spend a few hours trying [Electron].
+``` bash
+# install dependencies
+npm install
 
-## Download
-* [OS X]
-* [Windows]
+# serve with hot reload at localhost:9080
+npm run dev
 
-### Getting Started
-```
-$ git clone https://github.com/matiastucci/easysubs
-$ cd easysubs
-$ npm install
-$ npm run dev
+# build electron application for production
+npm run build
+
+
+# lint all JS/Vue component files in `src/`
+npm run lint
+
 ```
 
-### Making a release
-```
-$ npm run release
-```
+---
 
-[OpenSubtitles]: http://www.opensubtitles.org
-[Electron]: http://electron.atom.io
-[electron-vue]: https://github.com/SimulatedGREG/electron-vue
-[Photon]: http://photonkit.com
-[OS X]: https://github.com/matiastucci/easysubs/releases/download/v0.0.3/Easysubs-osx-x64.zip
-[Windows]: https://github.com/matiastucci/easysubs/releases/download/v0.0.3/Easysubs-win32-x64.zip
+This project was generated with [electron-vue](https://github.com/SimulatedGREG/electron-vue)@[b31b441](https://github.com/SimulatedGREG/electron-vue/tree/b31b44123ad42acac12337c4955df4ead853f0df) using [vue-cli](https://github.com/vuejs/vue-cli). Documentation about the original structure can be found [here](https://simulatedgreg.gitbooks.io/electron-vue/content/index.html).
