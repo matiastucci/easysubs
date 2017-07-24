@@ -1,8 +1,7 @@
 import Analytics from 'electron-google-analytics'
 
 let analytics
-// const develop = process.env.NODE_ENV === 'development'
-const develop = false
+const develop = process.env.NODE_ENV === 'development'
 
 function init () {
   if (develop) return
