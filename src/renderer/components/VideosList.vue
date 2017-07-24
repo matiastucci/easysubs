@@ -1,5 +1,5 @@
 <script>
-
+  import Analytics from '@/services/analytics'
   import Videos from '@/services/videos'
   import Subtitles from '@/services/subtitles'
 
@@ -37,6 +37,7 @@
         this.downloadsCount++
         Subtitles.get(id, name, path, size).then(sub => {
           if (!sub.file.hasUrl) {
+            Analytics.event('Download error', name)
             this.changeStatus(id, 'error')
             return
           }
@@ -45,6 +46,7 @@
           Subtitles.download(sub.file.id, sub[key].url, subName).then(() => {
             this.changeStatus(id, 'completed')
             if (this.downloadsCount === this.videos.length) {
+              Analytics.event('Download success', name)
               new Notification('Download completed', {
                 body: 'Enjoy your subs :)'
                 // TODO: fix icon path

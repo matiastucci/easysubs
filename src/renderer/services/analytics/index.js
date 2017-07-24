@@ -1,7 +1,8 @@
 import Analytics from 'electron-google-analytics'
 
 let analytics
-const develop = process.env.NODE_ENV === 'development'
+// const develop = process.env.NODE_ENV === 'development'
+const develop = false
 
 function init () {
   if (develop) return
@@ -13,7 +14,13 @@ function pageView (section) {
   analytics.pageview('https://tucci.me/projects/easysubs', section)
 }
 
+function event (eventName, data) {
+  if (develop || !analytics) return
+  analytics.event(eventName, data)
+}
+
 export default {
   init,
-  pageView
+  pageView,
+  event
 }
