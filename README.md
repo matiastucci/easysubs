@@ -9,7 +9,7 @@ Easysubs
 Easysubs is an open source app that allows you to download subtitles from [OpenSubtitles] in a very fast and simple way. I used [electron-vue] as a starter and [Photon] for the UI.
 
 ## Why?
-I was using a similar app that recently stopped being free. So, that was a good excuse to spend a few hours trying [Electron].
+I was using a similar app that recently stopped being free.
 
 ## Download
 * [OS X]
@@ -19,17 +19,16 @@ I was using a similar app that recently stopped being free. So, that was a good 
 ```
 $ git clone https://github.com/matiastucci/easysubs
 $ cd easysubs
-$ npm install
-$ npm run dev
+$ yarn # or npm install
+$ yarn run dev # or npm run dev
 ```
 
 ### Making a release
 ```
-$ npm run release
+$ yarn run build # or npm run build
 ```
 
 [OpenSubtitles]: http://www.opensubtitles.org
-[Electron]: http://electron.atom.io
 [electron-vue]: https://github.com/SimulatedGREG/electron-vue
 [Photon]: http://photonkit.com
 [OS X]: https://github.com/matiastucci/easysubs/releases/download/v0.0.3/Easysubs-osx-x64.zip
