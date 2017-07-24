@@ -1,5 +1,4 @@
 <script>
-
   import Analytics from '@/services/analytics'
   import Videos from '@/services/videos'
   const path = require('path')
