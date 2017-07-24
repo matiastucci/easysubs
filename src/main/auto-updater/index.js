@@ -15,6 +15,8 @@ if (os.platform() === 'darwin') {
 }
 
 function init (mainWindow) {
+  mainWindow.webContents.send('ping', `App version: ${appVersion}`)
+
   if (initialized || !updateFeed || process.env.NODE_ENV === 'development') { return }
 
   initialized = true
