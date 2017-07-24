@@ -47,7 +47,7 @@
     },
     "win": {
       "icon": "build/icons/icon.ico",
-       "target": [
+      "target": [
         "squirrel"
       ]
     },
@@ -56,6 +56,7 @@
     }
   },
   "dependencies": {
+    "electron-google-analytics": "0.0.16",
     "opensubtitles-api": "^4.0.0",
     "vue": "^2.3.3",
     "vue-router": "^2.5.3"

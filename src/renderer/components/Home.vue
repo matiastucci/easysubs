@@ -1,5 +1,6 @@
 <script>
 
+  import Analytics from '@/services/analytics'
   import Videos from '@/services/videos'
   const path = require('path')
 
@@ -22,6 +23,7 @@
     },
 
     mounted () {
+      Analytics.pageView('/home')
       this.$nextTick(() => {
         this.$el.addEventListener('drop', this.onDrop)
         this.$el.addEventListener('dragover', this.onDragover)

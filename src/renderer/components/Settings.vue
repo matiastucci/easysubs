@@ -1,5 +1,6 @@
 <script>
 
+  import Analytics from '@/services/analytics'
   import Settings from '@/services/settings'
 
   export default {
@@ -15,6 +16,7 @@
     },
 
     mounted () {
+      Analytics.pageView('/settings')
       const settings = Settings.get()
       this.subLanguage = settings.subLanguage
       this.subExtension = settings.subExtension
