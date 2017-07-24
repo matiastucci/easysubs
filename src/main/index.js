@@ -1,8 +1,8 @@
 'use strict'
 
 import { app, BrowserWindow } from 'electron'
-if (require('electron-squirrel-startup')) app.quit()
 import AutoUpdater from './auto-updater'
+if (require('electron-squirrel-startup')) app.quit()
 
 /**
  * Set `__static` path to static files in production
