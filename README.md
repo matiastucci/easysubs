@@ -12,8 +12,7 @@ Easysubs is an open source app that allows you to download subtitles from [OpenS
 I was using a similar app that recently stopped being free.
 
 ## Download
-* [OS X]
-* [Windows]
+* [OS X and Windows]
 
 ### Getting Started
 ```
@@ -31,5 +30,4 @@ $ yarn run build # or npm run build
 [OpenSubtitles]: http://www.opensubtitles.org
 [electron-vue]: https://github.com/SimulatedGREG/electron-vue
 [Photon]: http://photonkit.com
-[OS X]: https://github.com/matiastucci/easysubs/releases/download/v0.0.3/Easysubs-osx-x64.zip
-[Windows]: https://github.com/matiastucci/easysubs/releases/download/v0.0.3/Easysubs-win32-x64.zip
+[OS X and Windows]: https://github.com/matiastucci/easysubs/releases
